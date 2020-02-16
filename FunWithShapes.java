@@ -4,7 +4,6 @@ public class FunWithShapes extends ShapeHandler {
 
 	FunWithShapes() throws ShapeException {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -45,7 +44,7 @@ public class FunWithShapes extends ShapeHandler {
 	public double sumOverPerimeters() {
 		double totalPerim = 0;
 		for(int i = 0; i < shapes.size(); i++) {
-			totalPerim += shapes.elementAt(i).getArea();
+			totalPerim += shapes.elementAt(i).getPerimeter();
 		}
 		return totalPerim;
 	}
@@ -56,9 +55,9 @@ public class FunWithShapes extends ShapeHandler {
 		try {
 			shape = new FunWithShapes();
 		} catch (ShapeException e) {
-			// TODO Auto-generated catch block
 			throw new ShapeException("Failed to create FunWithShapes object");
 		}
+		
 		Double sumArea = shape.sumOverAreas();
 		Double sumPerimeter = shape.sumOverPerimeters();
 		
